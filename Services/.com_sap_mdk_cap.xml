@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="Build" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Employee" EntityType="Build.Employee"/>
+                <EntitySet Name="testDetails" EntityType="Build.testDetails"/>
+                <EntitySet Name="Users" EntityType="Build.Users"/>
+                <EntitySet Name="Scans" EntityType="Build.Scans"/>
+                <ActionImport Name="SendEmail" Action="Build.SendEmail"/>
+                <ActionImport Name="updateQR" Action="Build.updateQR"/>
+                <ActionImport Name="scan" Action="Build.scan"/>
+                <ActionImport Name="UpdateData" Action="Build.UpdateData"/>
+                <ActionImport Name="PullRequest" Action="Build.PullRequest"/>
+            </EntityContainer>
+            <EntityType Name="Employee">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="empid" Type="Edm.String" MaxLength="30"/>
+                <Property Name="empname" Type="Edm.String" MaxLength="100"/>
+                <Property Name="street" Type="Edm.String" MaxLength="100"/>
+                <Property Name="city" Type="Edm.String" MaxLength="100"/>
+                <Property Name="state" Type="Edm.String" MaxLength="100"/>
+                <Property Name="zip" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="testDetails">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="NAME" Type="Edm.String" MaxLength="50"/>
+                <Property Name="EMAIL" Type="Edm.String" MaxLength="50"/>
+                <Property Name="STATUS" Type="Edm.String" MaxLength="30"/>
+                <Property Name="DESCRIPTION" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="Users">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="firstName" Type="Edm.String"/>
+                <Property Name="lastName" Type="Edm.String"/>
+                <Property Name="linkedinQR" Type="Edm.String" MaxLength="500"/>
+                <Property Name="email" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Scans">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="userID" Type="Edm.Guid"/>
+                <Property Name="qrCodeID" Type="Edm.Guid"/>
+                <Property Name="timestamp" Type="Edm.DateTimeOffset"/>
+            </EntityType>
+            <Action Name="SendEmail" IsBound="false">
+                <ReturnType Type="Edm.Boolean"/>
+            </Action>
+            <Action Name="updateQR" IsBound="false">
+                <ReturnType Type="Edm.String"/>
+            </Action>
+            <Action Name="scan" IsBound="false">
+                <Parameter Name="qrCodeID" Type="Edm.String" MaxLength="200"/>
+                <ReturnType Type="Edm.String"/>
+            </Action>
+            <Action Name="UpdateData" IsBound="false">
+                <Parameter Name="STATUS" Type="Edm.String" MaxLength="200"/>
+                <Parameter Name="ID" Type="Edm.String" MaxLength="36"/>
+                <ReturnType Type="Edm.String"/>
+            </Action>
+            <Action Name="PullRequest" IsBound="false">
+                <Parameter Name="EMAIL" Type="Edm.String" MaxLength="200"/>
+                <ReturnType Type="Edm.String"/>
+            </Action>
+            <Annotations Target="Build.Employee/id">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="Build.testDetails/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="Build.Users/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="Build.Scans/ID">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

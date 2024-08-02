@@ -1,0 +1,105 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"_Type": "Section.Type.ProfileHeader",
+					"_Name": "SectionProfileHeader0",
+					"Visible": true,
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"ProfileHeader": {
+						"DetailImage": "res://contact.png",
+						"DetailImageIsCircular": true,
+						"Headline": "{empname}",
+						"Subheadline": "{empid}",
+						"Description": ""
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"KeyAndValues": [
+						{
+							"Value": "{city}",
+							"_Name": "KeyValue0",
+							"KeyName": "City",
+							"Visible": true
+						},
+						{
+							"Value": "{street}",
+							"_Name": "KeyValue1",
+							"KeyName": "Street",
+							"Visible": true
+						},
+						{
+							"Value": "{state}",
+							"_Name": "KeyValue3",
+							"KeyName": "State",
+							"Visible": true
+						},
+						{
+							"Value": "{zip}",
+							"_Name": "KeyValue2",
+							"KeyName": "Zip",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "EmpDetails",
+	"Caption": "Employee Details",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/capmdk/Actions/NavToUpdateEmpDetailsPage.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Item",
+				"SystemItem": "Trash",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/capmdk/Rules/DeleteEmployeeRule.js"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

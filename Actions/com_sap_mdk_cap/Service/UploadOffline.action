@@ -1,0 +1,9 @@
+{
+    "Service": "/capmdk/Services/com_sap_mdk_cap.service",
+    "_Type": "Action.Type.OfflineOData.Upload",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnSuccess": "/capmdk/Actions/com_sap_mdk_cap/Service/DownloadStartedMessage.action",
+    "OnFailure": "/capmdk/Actions/com_sap_mdk_cap/Service/SyncFailureMessage.action"
+}

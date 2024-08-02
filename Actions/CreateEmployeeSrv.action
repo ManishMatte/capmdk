@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "CreateEmployeeSrv"
+	},
+	"OnFailure": "/capmdk/Actions/CreateEmployeeFailMsg.action",
+	"OnSuccess": "/capmdk/Actions/CloseModalPage_Complete.action",
+	"ValidationRule": "/capmdk/Rules/IDValidation.js",
+	"Target": {
+		"Service": "/capmdk/Services/com_sap_mdk_cap.service",
+		"EntitySet": "Employee"
+	},
+	"Properties": {
+		"empid": "#Control:FCID/#Value",
+		"empname": "#Control:FCName/#Value",
+		"street": "#Control:FCStreet/#Value",
+		"city": "#Control:FCCity/#Value",
+		"state": "#Control:FCState/#Value",
+		"zip": "#Control:FCZip/#Value"
+	}
+}

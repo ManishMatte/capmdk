@@ -1,0 +1,13 @@
+{
+	"_Type": "Action.Type.ODataService.DeleteEntity",
+	"ActionResult": {
+		"_Name": "DeleteEmployeeSrv"
+	},
+	"OnFailure": "/capmdk/Actions/DeleteEmployeeFailMsg.action",
+	"OnSuccess": "/capmdk/Actions/CloseModalPage_Complete.action",
+	"Target": {
+		"Service": "/capmdk/Services/com_sap_mdk_cap.service",
+		"EntitySet": "Employee",
+		"ReadLink": "{@odata.readLink}"
+	}
+}

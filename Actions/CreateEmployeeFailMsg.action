@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "CreateEmployeeFailMsg"
+	},
+	"Message": "Failed - {#ActionResults:CreateEmployeeSrv/error}",
+	"Title": "Create Employee",
+	"OKCaption": "OK"
+}

@@ -1,0 +1,26 @@
+{
+    "Service": "/capmdk/Services/com_sap_mdk_cap.service",
+    "DefiningRequests": [{
+            "Name": "Employee",
+            "Query": "Employee"
+        },
+        {
+            "Name": "Scans",
+            "Query": "Scans"
+        },
+        {
+            "Name": "testDetails",
+            "Query": "testDetails"
+        },
+        {
+            "Name": "Users",
+            "Query": "Users"
+        }
+    ],
+    "_Type": "Action.Type.OfflineOData.Download",
+    "ActionResult": {
+        "_Name": "sync"
+    },
+    "OnFailure": "/capmdk/Actions/com_sap_mdk_cap/Service/SyncFailureMessage.action",
+    "OnSuccess": "/capmdk/Rules/ErrorArchive/ErrorArchive_CheckForSyncError.js"
+}

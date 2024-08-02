@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "DeleteCurrEmployeeData"
+	},
+	"Message": "Are you sure you want to delete?",
+	"Title": "Warning!!!",
+	"OKCaption": "Ok",
+	"CancelCaption": "Cancel"
+}

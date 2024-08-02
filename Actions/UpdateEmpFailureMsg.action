@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "UpdateEmpFailureMsg"
+	},
+	"Message": "Failed to update employee details - {#ActionResults:UpdateEmployeeSrv/error}",
+	"Title": "Update Employee",
+	"OKCaption": "OK"
+}

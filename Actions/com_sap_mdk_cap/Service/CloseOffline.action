@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/capmdk/Services/com_sap_mdk_cap.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/capmdk/Actions/com_sap_mdk_cap/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/capmdk/Actions/com_sap_mdk_cap/Service/CloseOfflineFailureMessage.action"
+}

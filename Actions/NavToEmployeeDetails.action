@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.Navigation",
+	"ActionResult": {
+		"_Name": "NavToEmployeeDetails"
+	},
+	"PageToOpen": "/capmdk/Pages/EmpDetails.page"
+}

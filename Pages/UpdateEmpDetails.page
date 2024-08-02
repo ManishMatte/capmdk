@@ -1,0 +1,128 @@
+{
+	"Controls": [
+		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0",
+					"Controls": [
+						{
+							"Value": "{empid}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCID",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "ID",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{empname}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCName",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Employee Name",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{city}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCCity",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "City",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{state}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCState",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "State",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{street}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCStreet",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Street",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "{zip}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FCZip",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Zip",
+							"PlaceHolder": "PlaceHolder",
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				}
+			],
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			}
+		}
+	],
+	"_Type": "Page",
+	"_Name": "UpdateEmpDetails",
+	"Caption": "Update Employee Details",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "Cancel",
+				"SystemItem": "Cancel",
+				"Icon": "sap-icon://cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/capmdk/Actions/CloseUpdateDetailsPage.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "Item",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/capmdk/Actions/UpdateEmployeeSrv.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

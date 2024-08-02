@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.ClosePage",
+	"ActionResult": {
+		"_Name": "CloseCreateEmployeePage"
+	},
+	"DismissModal": "Action.Type.ClosePage.Canceled",
+	"CancelPendingActions": true,
+	"NavigateBackToPage": "listData"
+}

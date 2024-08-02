@@ -1,0 +1,8 @@
+{
+    "Message": "Upload in progress...",
+    "CompletionMessage": "Sync completed",
+    "CompletionTimeout": 7,
+    "OnSuccess": "/capmdk/Actions/com_sap_mdk_cap/Service/UploadOffline.action",
+    "OnFailure": "/capmdk/Actions/com_sap_mdk_cap/Service/SyncFailureMessage.action",
+    "_Type": "Action.Type.ProgressBanner"
+}
